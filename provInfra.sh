@@ -69,6 +69,7 @@ provision_infra() {
   export AWS_ACCESS_KEY_ID=$aws_access_key_id
   export AWS_SECRET_ACCESS_KEY=$aws_secret_access_key
   export AWS_DEFAULT_REGION=$REGION
+  terraform init
   terraform apply
 }
 provision_infra
