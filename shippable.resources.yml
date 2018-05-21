@@ -5,7 +5,7 @@ resources:
 # add integration for AWS
   - name: integration_aws
     type: integration
-    integration: aws_keys
+    integration: aws_iam
 
 # add gitRepo for Terraform scripts
   - name: repo_tfScripts
