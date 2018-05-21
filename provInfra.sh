@@ -36,8 +36,8 @@ get_aws_integration() {
   local INTEGRATION_FILE="./IN/integration_aws/integration.env"
   if [ -f "$INTEGRATION_FILE" ]; then
     . $INTEGRATION_FILE
-    echo $INTEGRATION_FILE
-    cat $INTEGRATION_FILE
+    echo $accessKey
+    echo $secretKey
     echo "loaded integration file"
   else
     echo "no integration file exists"
