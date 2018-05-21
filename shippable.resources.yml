@@ -3,21 +3,21 @@ resources:
 ################################
 
 # add integration for AWS
-  - name: integration-aws
+  - name: integration_aws
     type: integration
-    integration: manishas-aws  #REPLACE THIS WITH YOUR AWS INTEGRATION
+    integration: aws_iam
 
 # add gitRepo for Terraform scripts
-  - name: repo-tfScripts
+  - name: repo_tfScripts
     type: gitRepo
-    integration: github-manishas   #REPLACE THIS WITH YOUR GITHUB INTEGRATION
+    integration: cv_github
     pointer:
-      sourceName: manishas/sample_pipelines_terraform  #REPLACE nanishas WITH YOUR org name
+      sourceName: CoinvestHQ/aws-pipelines-terraform-t1
       branch: master
 
   # env vars for Terraform scripts
-  - name: params-tfScripts
+  - name: params_tfScripts
     type: params
     version:
       params:
-        REGION: "us-east-1"    #REPLACE THIS WITH REGION (optional)
+        REGION: "us-west-2"    #REPLACE THIS WITH REGION (optional)
