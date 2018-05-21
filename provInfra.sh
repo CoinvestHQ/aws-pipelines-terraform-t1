@@ -6,8 +6,8 @@ sudo apt-get update && apt-get install wget jq unzip
 
 echo -e "\n*** installing Terraform ***"
 install_terraform() {
-  local FILE_NAME=terraform_0.7.4_linux_amd64.zip
-  wget https://releases.hashicorp.com/terraform/0.7.4/$FILE_NAME
+  local FILE_NAME=terraform_0.11.7_linux_amd64.zip
+  wget https://releases.hashicorp.com/terraform/0.11.7/$FILE_NAME
   pwd
   unzip $FILE_NAME -d $(pwd)
   export PATH=$PATH:/build
