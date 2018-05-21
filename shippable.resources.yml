@@ -20,4 +20,4 @@ resources:
     type: params
     version:
       params:
-        REGION: "us-west-2"    #REPLACE THIS WITH REGION (optional)
+        REGION: "us-west-2"
