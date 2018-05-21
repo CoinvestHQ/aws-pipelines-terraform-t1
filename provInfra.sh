@@ -36,8 +36,7 @@ get_aws_integration() {
   local INTEGRATION_FILE="./IN/integration_aws/integration.env"
   if [ -f "$INTEGRATION_FILE" ]; then
     . $INTEGRATION_FILE
-    echo $accessKey
-    echo $secretKey
+    echo $REGION
     echo "loaded integration file"
   else
     echo "no integration file exists"
@@ -68,8 +67,8 @@ get_params
 echo -e "\n*** provisioning infrastructure on AWS ***"
 provision_infra() {
   cd /build/IN/repo_tfScripts/gitRepo
-  export accessKey=$aws_access_key_id
-  export secretKey=$aws_secret_access_key
+  export AWS_ACCESS_KEY_ID=$accessKey
+  export AWS_SECRET_ACCESS_KEY=$secretKey
   export AWS_DEFAULT_REGION=$REGION
   terraform init
   terraform apply
