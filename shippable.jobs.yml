@@ -1,12 +1,12 @@
 jobs:
 
 # Shell script infrastructure deployment to AWS
-  - name: tfDeploy
+  - name: tf_Deploy
     type: runSh
     steps:
-      - IN: integration-aws
-      - IN: repo-tfScripts
-      - IN: params-tfScripts
-      - IN: trigger-tf-deploy
+      - IN: integration_aws
+      - IN: repo_tfScripts
+      - IN: params_tfScripts
+      - IN: trigger_tf_deploy
       - TASK:
         - script: . /build/IN/repo-tfScripts/gitRepo/provInfra.sh
