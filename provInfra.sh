@@ -68,8 +68,8 @@ get_params
 echo -e "\n*** provisioning infrastructure on AWS ***"
 provision_infra() {
   cd /build/IN/repo_tfScripts/gitRepo
-  export AWS_ACCESS_KEY_ID=$aws_access_key_id
-  export AWS_SECRET_ACCESS_KEY=$aws_secret_access_key
+  export accessKey=$aws_access_key_id
+  export secretKey=$aws_secret_access_key
   export AWS_DEFAULT_REGION=$REGION
   terraform init
   terraform apply
